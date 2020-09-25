@@ -20,12 +20,16 @@ public class SecondActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         ArrayList<StudentData> list = new ArrayList<>();
-        list.add(new StudentData("Harish","Gyanani"));
-        list.add(new StudentData("Ritika","Gyanani"));
-        list.add(new StudentData("Vijay","Kamlani"));
+        list.add(new StudentData("Harish","Gyanani", false));
+        list.add(new StudentData("Ritika","Gyanani", false));
+        list.add(new StudentData("Vijay","Kamlani", false));
+
+        for (int i = 1; i<=20;i++){
+            list.add(new StudentData("Vijay"+i,"Kamlani", false));
+        }
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new Adapter(this, list));
+        recyclerView.setAdapter(new JavaAdapter(this, list));
     }
 }

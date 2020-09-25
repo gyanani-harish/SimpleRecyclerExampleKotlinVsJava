@@ -14,6 +14,7 @@ class MainActivity: Activity() {
         list.add(StudentData("Ritika","Gyanani"))
         list.add(StudentData("Vijay","Kamlani"))
 
+
         recyclerView.layoutManager = LinearLayoutManager(this)
         //recyclerView.setAdapter(Adapter(this, list))
         recyclerView.adapter = Adapter(this, list)
